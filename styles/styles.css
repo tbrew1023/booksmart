@@ -1,0 +1,82 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ---- grid ---- */
+.grid {
+  background: #e0e0e0;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+.grid-item {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-image: url("res/folder.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 30px solid rgba(0, 0, 0, 0);
+  -webkit-transition: -webkit-filter 300ms;
+  transition: -webkit-filter 300ms;
+  transition: filter 300ms;
+  transition: filter 300ms, -webkit-filter 300ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.grid-item span {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.grid-item--width2 {
+  width: 200px;
+}
+
+.grid-item--height2 {
+  height: 200px;
+}
+
+.grid-item:hover {
+  cursor: move;
+}
+
+.grid-item.ui-draggable-dragging,
+.grid-item.is-positioning-post-drag {
+  z-index: 2;
+}
+
+.packery-drop-placeholder {
+  background-image: url("res/folder-placeholder.svg");
+  opacity: 0.2;
+  border: 30px solid rgba(0, 0, 0, 0);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+/*# sourceMappingURL=styles.css.map */
