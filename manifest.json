@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Web Launcher",
+    "version": "0.1",
+    "description":"Open grouped urls",
+    "browser_action": {
+        "default_icon":"styles/res/folder.svg",
+        "default_popup":"popup.html"
+    },
+    "permissions": [
+        "bookmarks",
+        "tabs"
+    ]
+}

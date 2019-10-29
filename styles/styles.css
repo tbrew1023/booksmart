@@ -5,12 +5,27 @@
 
 body {
   font-family: 'Nunito', sans-serif;
+  min-width: 625px;
+  min-height: 500px;
+}
+
+h1 {
+  padding: 30px;
 }
 
 /* ---- grid ---- */
 .grid {
-  background: #e0e0e0;
   max-width: 1200px;
+  padding: 45px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 
 /* clear fix */
@@ -23,13 +38,12 @@ body {
 /* ---- .grid-item ---- */
 .grid-item {
   float: left;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background-image: url("res/folder.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  border: 30px solid rgba(0, 0, 0, 0);
   -webkit-transition: -webkit-filter 300ms;
   transition: -webkit-filter 300ms;
   transition: filter 300ms;
@@ -47,19 +61,21 @@ body {
 
 .grid-item span {
   text-align: center;
-  color: white;
-  font-weight: bold;
+  color: black;
+  margin-top: 150%;
 }
 
 .grid-item--width2 {
-  width: 200px;
+  width: 100px;
 }
 
 .grid-item--height2 {
-  height: 200px;
+  height: 100px;
 }
 
 .grid-item:hover {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
   cursor: move;
 }
 
@@ -71,7 +87,6 @@ body {
 .packery-drop-placeholder {
   background-image: url("res/folder-placeholder.svg");
   opacity: 0.2;
-  border: 30px solid rgba(0, 0, 0, 0);
   background-size: contain;
   background-repeat: no-repeat;
   -webkit-transition: -webkit-transform 0.2s;
